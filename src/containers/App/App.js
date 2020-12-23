@@ -11,10 +11,19 @@ class App extends Component {
         const {data} = this.state
         const {Search} = await getMovies('harry')
 
-        if(data!==Search){
+        if (data !== Search) {
             return this.setState({data: Search})
         }
 
+    }
+
+    _renderloading = () => {
+        let loading = []
+
+        for (let index = 10; index; index--) {
+            loading.push(<div key={index} className="isLoading"></div>)
+        }
+        return loading
     }
 
     render = () => {
