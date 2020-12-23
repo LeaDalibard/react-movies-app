@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
+import Movie from '../components/Movie'
+import data from '../constants/data'
+
+const App = () => (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Movie
+        Title={data[0].Title}
+        Year={data[0].Year}
+        Poster={data[0].Poster}
+        />
+
+      <Movie
+          Title={data[1].Title}
+          Year={data[1].Year}
+          Poster={data[1].Poster}
+      />
     </div>
-  );
-}
+
+)
 
 export default App;
