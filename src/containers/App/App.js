@@ -7,22 +7,15 @@ import './App.css'
 
 const App = () => (
     <div className="App">
-        <Movie
-        Title={data[0].Title}
-        Year={data[0].Year}
-        Poster={data[0].Poster}
-        />
 
-      <Movie
-          Title={data[1].Title}
-          Year={data[1].Year}
-          Poster={data[1].Poster}
-      />
-
-      <Movie />
-
+        {data.map(({imdbID, ...movie}) => (
+            <Movie
+                key={imdbID}
+                {...movie}
+            />
+        ))}
     </div>
-
+//Use spread operator '...movie' instead of 'Title, Year, Poster' because movies and data have the same properties/keys
 )
 
 export default App;
