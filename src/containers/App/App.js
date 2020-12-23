@@ -29,6 +29,14 @@ class App extends Component {
     render = () => {
         const {data} = this.state
 
+        if (!data.length){
+            return(<div className="App">
+                {this._renderloading()}
+            </div>)
+
+        }
+
+
         return (<div className="App">
             {data.map(({imdbID, ...movie}) => (
                 <Movie
