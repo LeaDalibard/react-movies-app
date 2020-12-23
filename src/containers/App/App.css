@@ -1,4 +1,17 @@
 .App {
+    padding: 5% 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.App .input{
+    display: flex;
+    justify-content: center;
+margin-bottom: 30px;
+}
+
+.App .content{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

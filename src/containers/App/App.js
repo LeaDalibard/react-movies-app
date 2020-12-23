@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import Movie from '../../components/Movie'
+import SearchInput from '../../components/SearchInput'
 //import data from '../../constants/data'
 import getMovies from "../../helpers/fetch";
 import './App.css'
@@ -29,22 +30,20 @@ class App extends Component {
     render = () => {
         const {data} = this.state
 
-        if (!data.length){
-            return(<div className="App">
-                {this._renderloading()}
-            </div>)
 
-        }
-
-
-        return (<div className="App">
-            {data.map(({imdbID, ...movie}) => (
-                <Movie
-                    key={imdbID}
-                    {...movie}
-                />
-            ))}
-        </div>)
+        return (
+            <div className="App">
+                <div className="input">
+                    <SearchInput onSubmit={}/>
+                </div>
+                <div className="Content">
+                    {!data.length
+                        ? this._renderloading()
+                        : data.map(({imdbID, ...movie}) => (<Movie key={imdbID}{...movie}/>
+                        ))}
+                </div>
+            </div>
+        )
     }
 
 }
