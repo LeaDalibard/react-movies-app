@@ -1,1 +1,35 @@
+.Movie{
+    display:flex;
+    flex-direction:row;
+    /* put meta & images side by side */
+    border: 1px solid #CCC;
+    padding:16px;
+    margin-right:10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
 
+
+.Movie .poster{
+    height:200px;
+
+}
+
+.Movie .meta{
+    display:flex;
+    flex-direction: column;
+    /* data in columns */
+    margin-left:16px;
+    font-family: sans-serif;
+}
+
+.Movie .meta h3.title{
+    color:#333;
+    font-size:24px;
+    margin-bottom: 8px;
+}
+
+.Movie .meta .year{
+    font-weight: 500;
+    color: #AAA;
+}

@@ -1,0 +1,6 @@
+.App {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    /*Tout se met en ligne et quand on arrive à fin du nav passe à la ligne*/
+}

@@ -1,7 +1,9 @@
 import React from 'react'
 
-import Movie from '../components/Movie'
-import data from '../constants/data'
+import Movie from '../../components/Movie'
+import data from '../../constants/data'
+
+import './App.css'
 
 const App = () => (
     <div className="App">
