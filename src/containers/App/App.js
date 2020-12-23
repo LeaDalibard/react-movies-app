@@ -18,6 +18,9 @@ const App = () => (
           Year={data[1].Year}
           Poster={data[1].Poster}
       />
+
+      <Movie />
+
     </div>
 
 )
