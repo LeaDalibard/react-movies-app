@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 import './Details.css'
+import {getMovieDetails} from "../../helpers/fetch";
 
 class Details extends Component {
 
@@ -11,6 +12,15 @@ class Details extends Component {
                 imdbID: PropTypes.string.isRequired,
             }).isRequired,
         }).isRequired,
+    }
+
+    state ={details :{}}
+
+    componentDidMount= async ()=>{
+        const {imdbID}= this.props.match.params
+        const details =await getMovieDetails()
+
+        return this.setState(details)
     }
 
     render =()=>"details"
