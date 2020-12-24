@@ -24,12 +24,12 @@ class Movie extends Component {
 
     render = () => {
 
-        const {Title, Year, Poster} = this.props
+        const {Title, Year, Poster, imdbID} = this.props
         const {isFavorite} = this.state
 
         return (
 
-            <div className="Movie">
+            <Link className="Movie" to={`/movie/${imdbID}`}>
                 <img className="poster" src={Poster} alt="poster"/>
                 <div className="meta">
                     <button className="favorite" type="button" onClick={this._toggleFavorite}>{isFavorite ? <Icon.CheckCircle/> :<Icon.PlusCircle/> }</button>
@@ -37,7 +37,7 @@ class Movie extends Component {
                     <h3 className="title">{Title}</h3>
                     <span className="year">{Year}</span>
                 </div>
-            </div>
+            </Link>
 
         )
 
