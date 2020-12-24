@@ -10,4 +10,15 @@ const getMovies = query =>
             .catch(reject)
     )
 
-export default getMovies
+const getMovieDetails = imdbId =>
+    new Promise((resolve, reject) =>
+        fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}`)
+            .then(response => response.json())
+            .then(resolve)
+            .catch(reject)
+    )
+
+export {
+    getMovies,
+    getMovieDetails
+}

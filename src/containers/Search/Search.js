@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 import Movie from '../../components/Movie'
 import SearchInput from '../../components/SearchInput'
 //import data from '../../constants/data'
-import getMovies from "../../helpers/fetch";
+import {getMovies} from "../../helpers/fetch";
 import './Search.css'
 
 class Search extends Component {
