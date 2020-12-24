@@ -4,9 +4,9 @@ import Movie from '../../components/Movie'
 import SearchInput from '../../components/SearchInput'
 //import data from '../../constants/data'
 import getMovies from "../../helpers/fetch";
-import './App.css'
+import './Search.css'
 
-class App extends Component {
+class Search extends Component {
     state = {data: []}
 
     //componentDidMount = async () => {
@@ -42,7 +42,7 @@ class App extends Component {
 
 
         return (
-            <div className="App">
+            <div className="Search">
                 <div className="input">
                     <SearchInput onSubmit={this._submitQuery}/>
                 </div>
@@ -58,11 +58,11 @@ class App extends Component {
 
 }
 
-export default App;
+export default Search;
 
 // Former code :
-//const App = () => (
-//     <div className="App">
+//const Search = () => (
+//     <div className="Search">
 //
 //         {data.map(({imdbID, ...movie}) => (
 //             <Movie
@@ -76,7 +76,7 @@ export default App;
 
 // Former code  before API:
 //render = () => (
-//         <div className="App">
+//         <div className="Search">
 //             {data.map(({imdbID, ...movie}) => (
 //                 <Movie
 //                     key={imdbID}

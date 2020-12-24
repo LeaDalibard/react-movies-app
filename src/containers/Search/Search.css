@@ -1,24 +1,24 @@
-.App {
+.Search {
     padding: 5% 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.App .input {
+.Search .input {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.App .content {
+.Search .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     /*Tout se met en ligne et quand on arrive à fin du nav passe à la ligne*/
 }
 
-.App .isLoading {
+.Search .isLoading {
     width: 374px;
     height: 224px;
     background-color: #DDD;
