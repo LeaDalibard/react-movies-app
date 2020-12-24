@@ -9,6 +9,7 @@ class Movie extends Component {
         Title: PropTypes.string.isRequired,
         Year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         Poster: PropTypes.string,
+        imdbID: PropTypes.string.isRequired,
     }
     static defaultProps = {
         Title: "WITHOUT TITLE",
