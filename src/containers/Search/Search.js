@@ -49,7 +49,7 @@ class Search extends Component {
                 <div className="content">
                     {!data.length
                         ? this._renderloading()
-                        : data.map(({imdbID, ...movie}) => (<Movie key={imdbID}{...movie}/>
+                        : data.map((movie, index) => (<Movie key={index}{...movie}/>
                         ))}
                 </div>
             </div>

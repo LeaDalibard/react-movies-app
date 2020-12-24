@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 //On importe React pour que JSX soit interprété
 import PropTypes from 'prop-types'
+import{Link}  from "react-router-dom";
 import * as Icon from 'react-feather'
 import './Movie.css'
 
