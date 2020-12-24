@@ -5,13 +5,13 @@
     justify-content: center;
 }
 
-.App .input{
+.App .input {
     display: flex;
     justify-content: center;
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
-.App .content{
+.App .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

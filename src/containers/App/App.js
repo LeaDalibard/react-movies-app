@@ -27,6 +27,15 @@ class App extends Component {
         return loading
     }
 
+    _submitQuery = async query => {
+        await this.setState({data: []})
+
+        const {Search} = await getMovies(query)
+
+        return this.setState({data: Search})
+
+    }
+
     render = () => {
         const {data} = this.state
 
@@ -34,7 +43,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="input">
-                    <SearchInput onSubmit={}/>
+                    <SearchInput onSubmit={this._submitQuery}/>
                 </div>
                 <div className="Content">
                     {!data.length

@@ -12,8 +12,8 @@ state = {value: ''}
 _handleChange = ({target: {value}}) => this.setState({value})
 
 render = () => {
-    const onSubmit = this.props
-    const value = this.state
+    const { onSubmit} = this.props
+    const {value} = this.state
 
     return(
        <div className="SearchInput">
@@ -24,4 +24,4 @@ render = () => {
 }
 
 }
-
+ export default SearchInput
