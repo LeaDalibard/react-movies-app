@@ -18,7 +18,7 @@ render = () => {
     return(
        <div className="SearchInput">
            <input className="query" onChange={this._handleChange} value={value}/>
-           <button type="button" className="Submit" onClick={()=>onSubmit(value)}>SEARCH</button>
+           <button type="button" className="submit" onClick={()=>onSubmit(value)}>SEARCH</button>
        </div>
     )
 }

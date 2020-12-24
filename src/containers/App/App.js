@@ -8,15 +8,16 @@ import './App.css'
 
 class App extends Component {
     state = {data: []}
-    componentDidMount = async () => {
-        const {data} = this.state
-        const {Search} = await getMovies('harry')
 
-        if (data !== Search) {
-            return this.setState({data: Search})
-        }
+    //componentDidMount = async () => {
+    //         const {data} = this.state
+    //         const {Search} = await getMovies('harry')
+    //
+    //         if (data !== Search) {
+    //             return this.setState({data: Search})
+    //         }
+    //     }
 
-    }
 
     _renderloading = () => {
         let loading = []
@@ -45,7 +46,7 @@ class App extends Component {
                 <div className="input">
                     <SearchInput onSubmit={this._submitQuery}/>
                 </div>
-                <div className="Content">
+                <div className="content">
                     {!data.length
                         ? this._renderloading()
                         : data.map(({imdbID, ...movie}) => (<Movie key={imdbID}{...movie}/>
