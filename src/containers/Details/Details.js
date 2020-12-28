@@ -14,10 +14,15 @@ class Details extends Component {
         }).isRequired,
     }
 
-    state = {details: {}}
+
+    state = {
+        details: {
+            Poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoCzq9xjEDLMt0eFPm5RP_-kTFYleKW3iheQ&usqp=CAU'
+        }
+    }
 
     componentDidMount = async () => {
-        const { imdbID } = this.props.match.params
+        const {imdbID} = this.props.match.params
         const details = await getMovieDetails(imdbID)
 
         return this.setState({details})
@@ -34,8 +39,6 @@ class Details extends Component {
                     <span className="genre">{Genre}</span>
                     <p className="plot">{Plot}</p>
                     <span className="rating">{imdbRating} / 10</span>
-
-
                 </div>
             </div>
         )
